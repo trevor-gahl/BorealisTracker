@@ -6,22 +6,13 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLConnection;
+
+import java.net.*;
+import java.io.*;
 import java.sql.*;
 
 
 import java.util.ArrayList;
-
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -45,6 +36,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
+    public void webCall(){
+        ArrayList<String> route = new ArrayList<>();
+        try {
+            URL url = new URL("http://153.90.202.26/php/dontDelete.php");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoOutput(true);
+            connection.setRequestMethod("GET");
+
+            InputStream writer = new BufferedInputStream(connection.getInputStream());
+            route.add(writer.toString());
+            writer.close();
+
+            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                // OK
+            } else {
+                // Server returned HTTP error code.
+            }
+        } catch (MalformedURLException e) {
+            // ...
+        } catch (IOException e) {
+            // ...
+        }
+    }
 
     /**
      * Manipulates the map once available.
