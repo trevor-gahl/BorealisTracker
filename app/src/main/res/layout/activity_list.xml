@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background"
@@ -12,167 +16,173 @@
     tools:context="com.example.trevor.myapplication.ListActivity">
 
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Montana State University"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="MSU"
-        android:clickable="true"
-        android:visibility="visible"/>
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="University of Montana"
-        android:id="@+id/button2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="UM"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <!-- everything you already have -->
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Montana State University"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="MSU"
+            android:clickable="true"
+            android:visibility="visible"/>
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="University of Montana"
+            android:id="@+id/button2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="UM"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #3"
-        android:id="@+id/button3"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S3"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #3"
+            android:id="@+id/button3"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S3"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #4"
-        android:id="@+id/button4"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S4"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #4"
+            android:id="@+id/button4"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S4"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #5"
-        android:id="@+id/button5"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S5"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #5"
+            android:id="@+id/button5"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S5"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #6"
-        android:id="@+id/button6"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S6"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #6"
+            android:id="@+id/button6"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S6"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #7"
-        android:id="@+id/button7"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S7"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #7"
+            android:id="@+id/button7"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S7"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #8"
-        android:id="@+id/button8"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S8"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #8"
+            android:id="@+id/button8"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S8"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #9"
-        android:id="@+id/button9"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S9"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #9"
+            android:id="@+id/button9"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S9"
+            android:clickable="true"
+            android:visibility="visible"/>
 
-    <Button
-        android:visibility="invisible"
-        android:layout_height="15dp"
-        />
+        <Button
+            android:visibility="invisible"
+            android:layout_height="15dp"
+            />
 
-    <Button
-        android:background="@color/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="School #10"
-        android:id="@+id/button10"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="S10"
-        android:clickable="true"
-        android:visibility="visible"/>
+        <Button
+            android:background="@color/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School #10"
+            android:id="@+id/button10"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="S10"
+            android:clickable="true"
+            android:visibility="visible"/>
+
+
+
+
 
 </TableLayout>
+    </ScrollView>
