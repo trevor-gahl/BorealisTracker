@@ -6,7 +6,19 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.sql.*;
+
+
 import java.util.ArrayList;
 
 
@@ -16,6 +28,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.*;
 import com.google.android.gms.maps.model.*;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -45,8 +63,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        String link = "http://153.90.202.26/php/dontDelete.php";
+
+
+
         mMap = googleMap;
-        ArrayList<LatLng> route = new ArrayList<LatLng>();
+        ArrayList<LatLng> route = new ArrayList<>();
         route.add(new LatLng(45.66984, -111.04866));
         route.add(new LatLng(45.66981, -111.04881));
         route.add(new LatLng(45.66975, -111.04894));
@@ -84,10 +106,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Polyline line = mMap.addPolyline(new PolylineOptions()
                 .addAll(route)
                 .width(10)
-                .color(Color.BLACK));
+                .color(Color.BLUE));
 
         // Add a marker in Sydney and move the camera
-        LatLng jabs = new LatLng(45.66905, -111.04871);
+        LatLng jabs = route.get(route.size() - 1);
         mMap.addMarker(new MarkerOptions()
                 .position(route.get(route.size() - 1))
                 .title("The Tip")
