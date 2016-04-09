@@ -40,10 +40,12 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="Maps"
+            />
         <activity
             android:name=".ListActivity"
-            android:label="School List"/>
+            android:label="School List"
+            />
     </application>
 
 </manifest>
