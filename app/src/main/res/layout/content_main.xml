@@ -14,21 +14,19 @@
     tools:showIn="@layout/activity_main"
     android:clickable="true">
 
-<TableRow>
+
     <TextView
-        android:layout_width="360dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="match_parent"
-        android:textSize="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="About the Borealis Project"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textAlignment="center" />
 
-</TableRow>
+
     <Button
 
         android:layout_height="25dp"
@@ -41,7 +39,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="The Borealis Project is a branch off of the Montana Space Grant Consortium. "
         android:textColor="#FFFFFF"
-        android:textSize="21dp"
+        android:textSize="20dp"
         android:gravity="center"
         android:id="@+id/textView2"
         android:layout_below="@+id/textView"
@@ -57,7 +55,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Map"
+        android:text="Balloon Path"
         android:background="#FFFFFF"
         android:textSize="18dp"
         android:id="@+id/button"
