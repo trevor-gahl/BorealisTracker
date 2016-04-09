@@ -6,8 +6,10 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -18,9 +20,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.sql.*;
 
-
 import java.util.ArrayList;
-
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,17 +29,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.*;
 import com.google.android.gms.maps.model.*;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.NameValuePair;
-
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,19 +43,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         String link = "http://153.90.202.26/php/dontDelete.php";
+        URL url = null;
+        HttpURLConnection urlConnection = null;
+        try {
+            url = new URL(link);
+            urlConnection = (HttpURLConnection) url.openConnection();
+            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+            //readStream(in);
 
         mMap = googleMap;
             ArrayList<LatLng> route = new ArrayList<>();
@@ -478,10 +467,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng jabs = route.get(route.size() - 1);
             mMap.addMarker(new MarkerOptions()
                     .position(route.get(route.size() - 1))
-                    .title("The Tip")
-                    .snippet("Population: 2 Many Crazy Coders")
+                    .title("Balloon")
+                    .snippet("This is the balloons most recent location")
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker)));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(jabs, 10));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            urlConnection.disconnect();
+        }
     }
 
     public void transitionMain(View view){
