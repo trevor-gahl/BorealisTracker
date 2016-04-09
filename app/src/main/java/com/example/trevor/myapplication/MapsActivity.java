@@ -1,8 +1,10 @@
 package com.example.trevor.myapplication;
 
 import android.graphics.Color;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -87,5 +89,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng jabs = new LatLng(45.66905, -111.04871);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(jabs, 18));
+    }
+    public void transitionMain(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
