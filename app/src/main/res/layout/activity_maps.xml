@@ -13,15 +13,7 @@
     tools:context="com.example.trevor.myapplication.MapsActivity"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     />
-    <RadioGroup
-        android:id="@+id/radio_group_list_selector"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal"
-        android:background="#80000000"
-        android:padding="4dp" >
-
-        <Button
+            <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Main"
@@ -31,5 +23,5 @@
             android:onClick="transitionMain"
             android:clickable="true"
             android:visibility="visible" />
-    </RadioGroup>
+
 </FrameLayout>

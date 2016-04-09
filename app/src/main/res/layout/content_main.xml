@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,6 +13,7 @@
     tools:showIn="@layout/activity_main"
     android:clickable="true">
 
+<TableRow>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
+</TableRow>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,8 +41,18 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="transitionMaps"
-        android:nestedScrollingEnabled="false"
+        android:clickable="true"
+        android:visibility="visible" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:id="@+id/button2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="Menu"
         android:clickable="true"
         android:visibility="visible" />
 
-</RelativeLayout>
+
+</TableLayout>
