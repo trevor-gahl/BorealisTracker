@@ -88,6 +88,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng jabs = new LatLng(45.66905, -111.04871);
+        mMap.addMarker(new MarkerOptions()
+                .position(route.get(route.size() - 1))
+                .title("The Tip")
+                .snippet("Population: 2 Many Crazy Coders")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker)));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(jabs, 18));
     }
     public void transitionMain(View view){
