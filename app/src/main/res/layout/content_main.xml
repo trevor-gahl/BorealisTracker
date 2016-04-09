@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    >
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -84,5 +89,26 @@
         android:clickable="true"
         android:visibility="visible" />
 
+    <Button
+
+        android:layout_height="50dp"
+        android:visibility="invisible"
+
+        />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="News"
+        android:textSize="18dp"
+        android:background="#FFFFFF"
+        android:id="@+id/button3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="News"
+        android:clickable="true"
+        android:visibility="visible" />
 
 </TableLayout>
+</ScrollView>

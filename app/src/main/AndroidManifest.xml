@@ -40,12 +40,13 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="Maps"
-            />
+            android:label="Maps" />
         <activity
             android:name=".ListActivity"
-            android:label="School List"
-            />
+            android:label="School List" />
+        <activity android:name=".NewsActivity"
+            android:label="Borealis News">
+        </activity>
     </application>
 
 </manifest>

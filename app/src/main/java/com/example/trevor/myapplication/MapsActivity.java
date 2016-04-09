@@ -486,8 +486,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng jabs = route.get(route.size() - 1);
             mMap.addMarker(new MarkerOptions()
                     .position(route.get(route.size() - 1))
-                    .title("The Tip")
-                    .snippet("Population: 2 Many Crazy Coders")
+                    .title("Current Location")
+                    .snippet("Current location of the weather balloon")
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker)));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(jabs, 10));
     }
