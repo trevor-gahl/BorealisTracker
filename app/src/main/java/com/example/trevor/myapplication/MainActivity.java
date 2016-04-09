@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Transition to Map", Snackbar.LENGTH_LONG)
+                        .setAction("MapsActivity", null).show();
             }
         });
     }

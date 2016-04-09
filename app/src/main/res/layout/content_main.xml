@@ -30,4 +30,15 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <android.gesture.GestureOverlayView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SwipetoMaps"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="130dp"
+        android:gestureStrokeType="single"
+        android:onClick="setContentView"></android.gesture.GestureOverlayView>
 </RelativeLayout>
